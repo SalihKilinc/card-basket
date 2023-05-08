@@ -44,8 +44,8 @@ return item.id===i.id;
   setbasket(arr);
 }
 else{
-  arr.map((item1)=>{
-if(item1.id===item.id)
+  arr.map((target)=>{
+if(target.id===item.id)
 {
   return (item.adet+=1)
 }
@@ -64,7 +64,30 @@ setbasket(arr)
      
       </div>
 
-  
+  <div className="sepet"> </div>
+<h2>SEPETIMIZ</h2>
+<ul className="sepet">
+ {
+  basket.map((item,i)=>{
+return(
+<li> {item.title + "----->"  +item.info    + "Adet" } {" "}
+<b style={{fontSize: "17px" , color: "blueviolet"}}> {item.adet}</b>
+</li>
+
+
+  )})
+ }
+</ul>
+
+{
+  basket.length >0 ? (
+    <button onClick={()=>{
+      setbasket([])
+    }}>sepeti temizle</button>
+  ):(
+    <h2> Your basket clean </h2>
+  )
+}
 
     </div>
   )
@@ -72,4 +95,5 @@ setbasket(arr)
 export default App;
 
 //if yapisi ile tiklandiginda ekleme yapma ozelligi verildi
-//
+// else kisminda urun ekliyse bir arttir dedik
+// sepetimiz kisminda ise ekrana getirdik secilen eleman ozelliklerini
