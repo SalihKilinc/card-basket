@@ -16,7 +16,8 @@ export const App = () => {
   
     {id: 3, title: "Ekran Karti",  image: "https://picsum.photos/id/129/4910/3252", info:"Nvdia Geoforce 1050",  adet: 1}, 
     
-    { id: 4,  title: "Monitor",  image: "https://picsum.photos/id/121/1600/1067", info:"17",  adet: 1}
+    { id: 4,  title: "Monitor",  image: "https://picsum.photos/id/121/1600/1067", info:"17",  adet: 1},
+    { id: 5,  title: "Keyboord",  image:"https://picsum.photos/id/127/4032/2272", info:"17",  adet: 1}
      
      ]);
 
