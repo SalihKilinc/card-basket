@@ -7,8 +7,14 @@ const inputChange = e =>{
 
 }
 const inputSubmit = () =>{
-setTodos=([...todos,{text:inputText,completed:false , id:Math.random()*10000}])
-setInputText("")
+
+if (inputText === ""){
+    return
+}else{
+    setTodos([...todos,{text:inputText,completed:false , id:Math.random()*1000}])
+    setInputText("")
+}
+
 }
 
 
@@ -20,8 +26,18 @@ setInputText("")
             <button onClick={inputSubmit}>ADD</button>
         </div>
       
+<div className="select">
+    <select name="todos" > 
+        <option value="All">All</option>
+        <option value="finished">Finished</option>
+        <option value="uncompleted">Uncompleted</option>
+        
+        </select>
+
+</div>
+
     </div>
   )
 }
 
-export default Form
+export default Form 
