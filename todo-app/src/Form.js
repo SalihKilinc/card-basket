@@ -1,11 +1,17 @@
 import React from 'react'
 
-const Form = ({inputText , setInputText , setTodos , todos }) => {
+const Form = ({inputText , setInputText , setTodos , todos ,option , setOption }) => {
 
 const inputChange = e =>{
     setInputText(e.target.value)
 
 }
+
+const selectChange = e => {
+    setOption(e.target.value)
+}
+
+
 const inputSubmit = () =>{
 
 if (inputText === ""){
@@ -27,7 +33,7 @@ if (inputText === ""){
         </div>
       
 <div className="select">
-    <select name="todos" > 
+    <select name="todos" className='filter' onChange={selectChange} > 
         <option value="All">All</option>
         <option value="finished">Finished</option>
         <option value="uncompleted">Uncompleted</option>

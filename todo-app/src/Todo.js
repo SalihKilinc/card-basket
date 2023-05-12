@@ -25,7 +25,7 @@ return {
   return (
     <div className='todo__container'>
 
-      <div className={todo.completed ? "completed" : "notYet"} > {text} </div>
+      <div className={todo.completed ? "completed" : "not"} > {text} </div>
         <VscPassFilled onClick={completeItem}  className='icon' />
         <VscChromeClose onClick={deleteItem} className='icon' />
      
