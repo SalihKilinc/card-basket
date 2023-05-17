@@ -15,31 +15,26 @@ const CustomerServiceRobot = () => {
       let robotAnswer;
 
       switch (userQuestion) {
-        // eslint-disable-next-line no-unused-expressions
-        case 1 :'Nasıl yardımcı olabilirim?'
-          robotAnswer = 'Size nasıl yardımcı olabilirim?';
+        case 'Benim bir sorum olacakti':
+          robotAnswer = ' Merhaba size nasıl yardımcı olabilirim?';
           break;
-        // eslint-disable-next-line no-unused-expressions
-        case 2:'Ürün iade süreci nasıl işliyor?'
+        case 'Urunu iade etmek istiyorum' :
           robotAnswer = 'Ürün iade süreci hakkında bilgi almak için lütfen şu sayfayı ziyaret edin...';
           break;
-        // eslint-disable-next-line no-unused-expressions
-        case 3 : 'Siparişim ne zaman teslim edilecek?'
+        case 'Siparis teslim tarihi nedir':
           robotAnswer = 'Siparişinizin teslim tarihi şu tarihte olacak...';
           break;
-        // eslint-disable-next-line no-unused-expressions
-        case 4:'Fatura bilgilerimde bir yanlışlık var. Ne yapabilirim?'
+        case 'Fatura bilgilerimi duzenlemek istiyorum':
           robotAnswer = 'Fatura bilgilerinizi düzeltmek için şu formu doldurmanız gerekiyor...';
           break;
-        // eslint-disable-next-line no-unused-expressions
-        case 5: 'Başka bir soru?'
+        case '':
           robotAnswer = 'Size nasıl yardımcı olabilirim?';
           break;
         default:
           robotAnswer = 'Ürün iade süreci hakkında bilgi almak için lütfen şu sayfayı ziyaret edin...';
           break;
       }
-
+      
       setResponse(robotAnswer);
       setUserInput('');
     }
