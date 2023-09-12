@@ -9,7 +9,7 @@ function App() {
 
   }
 
-  const data = [{
+  const data = [{ 
     id: 1,
     title: "Liverpool",
     color: "orange",
